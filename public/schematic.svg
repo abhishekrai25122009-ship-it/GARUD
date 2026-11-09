@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="6400" height="6400" viewBox="-3000 -3000 6400 6400">
+  <defs>
+    <style>
+      .land { fill: #0b140f; stroke: none; }
+      .water { fill: #091618; stroke: #143034; stroke-width: 14; }
+      .terrain { fill: #0e1a14; stroke: none; }
+      .road { fill: none; stroke: #1e2e24; stroke-width: 26; stroke-linecap: round; stroke-linejoin: round; }
+      .road-minor { fill: none; stroke: #18241c; stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; }
+      .facility { fill: none; stroke: #2d4a3c; stroke-width: 16; stroke-linejoin: round; }
+      .facility-fill { fill: #12221a; stroke: #2d4a3c; stroke-width: 10; stroke-linejoin: round; }
+      .label { font-family: monospace; font-size: 42px; fill: #4a6355; dominant-baseline: middle; text-anchor: middle; }
+      .label-fictional { fill: #6b7d6f; }
+    </style>
+  </defs>
+
+  <!-- Title label -->
+  <text x="0" y="-2820" class="label">Fictional schematic</text>
+
+  <!-- Terrain patches -->
+  <rect x="-2600" y="-2600" width="1400" height="1200" class="terrain" rx="300" />
+  <rect x="1200" y="1400" width="1600" height="1000" class="terrain" rx="250" />
+  <circle cx="-100" cy="2200" r="900" class="terrain" />
+
+  <!-- Water -->
+  <path d="M -2900 600 Q -2400 100 -1800 400 L -2200 900 Q -2700 800 -2900 600 Z" class="water" />
+  <path d="M 2400 -600 Q 2800 -200 3200 100 L 2900 700 Q 2300 500 2400 -600 Z" class="water" />
+
+  <!-- Roads -->
+  <path d="M -3000 -1400 L 3400 -1400" class="road" />
+  <path d="M -3000 600 L 3400 600" class="road" />
+  <path d="M -1400 -3000 L -1400 3400" class="road" />
+  <path d="M 1600 -3000 L 1600 3400" class="road" />
+  <path d="M -2400 -2200 L 600 -800" class="road-minor" />
+  <path d="M 2000 2200 L -400 800" class="road-minor" />
+
+  <!-- Facility footprints (fictional) -->
+  <rect x="200" y="-420" width="900" height="700" class="facility-fill" rx="60" />
+  <path d="M 200 -420 L 1100 -420 L 650 280 Z" class="facility" />
+  <text x="650" y="-100" class="label label-fictional">TEST FIELD</text>
+
+  <rect x="-2100" y="900" width="700" height="500" class="facility-fill" rx="50" />
+  <path d="M -2100 900 L -1400 900 L -1750 1400 Z" class="facility" />
+  <text x="-1750" y="1120" class="label label-fictional">RANGE B</text>
+
+  <rect x="2300" y="-1900" width="500" height="600" class="facility-fill" rx="50" />
+  <path d="M 2300 -1900 L 2800 -1900 L 2550 -1300 Z" class="facility" />
+  <text x="2550" y="-1640" class="label label-fictional">OUTPOST C</text>
+
+  <!-- Protected zone schematic ring (fictional, not real airspace) -->
+  <circle cx="600" cy="0" r="600" fill="none" stroke="#74D5E8" stroke-width="14" stroke-dasharray="120 60" opacity="0.55" />
+  <text x="600" y="-760" class="label label-fictional" fill="#74D5E8">Protected Zone Alpha (fictional)</text>
+</svg>
